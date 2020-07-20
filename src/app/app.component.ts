@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello';
+  title: string = 'Satapitchakorn';
+  firstname: string = ''
+  lastname: string = ''
+  score: number = 100
+  show: boolean = true
+  color: Array<string> = ["red", "green"]
+  name: string = ''
+  inputName(event: any) {
+    this.firstname = event.target.value;
+  }
+  inputLastName(value: string) {
+    this.lastname = value
+  }
+  submit(e) {
+    e.preventDefault()
+    this.name = this.firstname + ' ' + this.lastname
+  }
 }
